@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import './index.css'
 import Hero from './Home/Hero.jsx/index.jsx'
 import Testimonials from './Home/Testimonials/index.jsx'
+import Counting from './Home/Counting/index.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <WhatWeDo/>
+      <Counting/>
       <Contact/>
       <Testimonials/>
       <Footer/>

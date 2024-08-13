@@ -5,7 +5,7 @@ import { Testimoni } from "../../content/testimonials";
 
 const Testimonials = () => {
   return (
-    <div className=" w-full flex justify-center bg-gradient-to-t  from-10% from-primary via-primary/50 to-40% to-white/50">
+    <div className="relative w-full flex justify-center bg-gradient-to-t  from-10% from-primary via-primary/50 to-40% to-white/10">
       <div className="max-w-[1204px] w-full flex flex-col">
         <div className="w-full flex items-center flex-col mt-16">
           <h2 className="text-6xl font-semibold">What our clients say</h2>
