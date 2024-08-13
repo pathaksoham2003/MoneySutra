@@ -8,6 +8,9 @@ import Whatsapp from "./Whatsapp.png?react";
 import Youtube from "./Youtube.png?react";
 import LinkedIn from "./LinkedIn.png?react";
 import Instagram from "./Instagram.png?react";
+import Design from "./Design.png?react"
+import Marketing from "./Marketing.png?react";
+import Code from "./Code.png?react";
 
 export {
   CAPathakPP,
@@ -20,4 +23,7 @@ export {
   LinkedIn,
   Whatsapp,
   Youtube,
+  Design,
+  Marketing,
+  Code,
 };

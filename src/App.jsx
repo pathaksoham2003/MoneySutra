@@ -6,6 +6,7 @@ import Contact from './Home/Contact'
 import Footer from './components/Footer'
 import './index.css'
 import Hero from './Home/Hero.jsx/index.jsx'
+import Testimonials from './Home/Testimonials/index.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Hero/>
       <WhatWeDo/>
       <Contact/>
+      <Testimonials/>
       <Footer/>
     </div>
   )
