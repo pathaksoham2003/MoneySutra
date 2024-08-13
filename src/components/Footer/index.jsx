@@ -5,6 +5,7 @@ import {
   Instagram,
   LinkedIn,
   Whatsapp,
+  Youtube,
 } from "../../assets";
 
 const Footer = () => {
@@ -42,6 +43,15 @@ const Footer = () => {
               onClick={() => handleSocialOpen("https://wa.me/8793543098")}
               className="w-[24px] mx-3"
               src={Whatsapp}
+            />
+            <img
+              onClick={() =>
+                handleSocialOpen(
+                  "https://www.youtube.com/@MoneySutraFinServ"
+                )
+              }
+              className="w-[24px] mx-3"
+              src={Youtube}
             />
             <img
               onClick={() =>
