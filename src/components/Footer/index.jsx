@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="w-[350px] text-center flex flex-col">
           <h2 className="text-white text-5xl font-anton font-thin drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             Money
-            <span className="text-red-700 font-serif font-semibold ">Sutra</span>
+            <span className="text-accent font-serif font-semibold ">Sutra</span>
           </h2>
           <h2 className="text-gray-300 mt-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             © 2024 MoneySutra. All rights reserved.{" "}

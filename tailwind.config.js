@@ -42,9 +42,10 @@ export default {
       },
       colors: {
         background: "#E5E5E5",
-        primary: "#4A3AFF",
+        primary: "#0a4c96",
         heading: "#1E1B39",
         subheading: "#6E6C83",
+        accent:"#dd1e25"
       },
     },
   },

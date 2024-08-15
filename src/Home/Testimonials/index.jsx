@@ -7,11 +7,11 @@ const Testimonials = () => {
   return (
     <div className="relative w-full flex justify-center bg-gradient-to-t  from-10% from-primary via-primary/50 to-40% to-white/10">
       <div className="max-w-[1204px] w-full flex flex-col">
-        <div className="w-full flex items-center flex-col t-16">
+        <div className="w-full flex items-center flex-col mt-16">
           <h2 className="text-6xl font-semibold px-3">What our clients say</h2>
         </div>
-        <div className="w-full flex mt-10 px-3 flex-col md:flex">
-          {Testimoni.map((item)=><div className="w-full p-8 my-3 bg-white border px-4 border-gray shadow-lg rounded-3xl">
+        <div className="w-full flex mt-10 px-3 flex-col md:flex-row">
+          {Testimoni.map((item)=><div className="w-full p-8 my-3 md:mx-2 bg-white border px-4 border-gray shadow-lg rounded-3xl">
             <div className="w-full flex mb-5">
               <Start />
               <Start />
@@ -21,7 +21,7 @@ const Testimonials = () => {
             </div>
 
             <h2 className="text-2xl font-semibold">"{item.reviewHeading}"</h2>
-            <p className="text-gray-600">{item.review}
+            <p className="text-gray-600 pt-4">{item.review}
             </p>
             <div className="w-full h-1 my-5 bg-gray-400/20 rounded-full"></div>
             <div className="flex w-full">

@@ -18,20 +18,20 @@ const Hero = () => {
     <div className="w-full flex justify-center">
       <div className="bg-slate-200 flex-1 hidden md:flex"></div>
       <div className="w-full flex flex-col-reverse md:flex-row max-w-[1240px] md:max-w-[1240px]">
-        <div className="w-full p-10 rounded-xl md:max-w-[500px] h-[600px] overflow-hidden">
+        <div className="w-full md:max-w-[500px] h-[650px] overflow-hidden">
           <img className="object-contain w-full" src={HeroImg} />
         </div>
-        <div className="flex flex-1 flex-col justify-start pl-10 pt-20 items-start bg-primary">
+        <div className="flex flex-1 flex-col justify-start min-h-[650px] pl-10 pt-20 items-start bg-primary">
           <h2 className="bg-blue text-[24px] text-white flex items-end">
             SAVE | INVEST | GROW <span className="text-4xl block ml-3">🚀</span>
           </h2>
           <h2 className="bg-blue text-[80px] leading-[80px] text-white font-semibold">
             Plan your Financial Future with us.
           </h2>
-          <div className="flex mt-12">
-            <div className="w-[110px] h-[110px] rounded-full overflow-hidden">
+          <div className="flex pt-12">
+            <div className="md:w-[110px] md:h-[98px] w-full max-w-24 aspect-square rounded-full overflow-hidden">
               <img
-                className="w-full object-contain object-top"
+                className="w-full object-contain"
                 src={CAPathakPP}
               />
             </div>
@@ -45,8 +45,8 @@ const Hero = () => {
               <h2 className="text-background">(ARM-303749)</h2>
             </div>
           </div>
-          <div className="w-full flex  justify-between">
-            <div className="ml-auto  p-5 bg-[#131557] animate-bounce-sm rounded-2xl shadow-lg shadow-black">
+          <div className="w-full flex justify-between pr-5">
+            <div className="ml-auto p-5 bg-accent animate-bounce-sm rounded-2xl shadow-lg shadow-black/70">
               <h2 className="text-white text-2xl font-semibold">
                 Contact with me
               </h2>
