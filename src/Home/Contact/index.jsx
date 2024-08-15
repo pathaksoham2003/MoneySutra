@@ -5,9 +5,9 @@ const Contact = () => {
   return (
     <div className="w-full flex justify-center ">
       
-      <div className="max-w-[1240px] flex">
-        <div className="flex">
-          <div className="px-16 mt-16">
+      <div className="w-full max-w-[1240px] flex ">
+        <div className="flex flex-col md:flex-row">
+          <div className="px-4 md:px-16 mt-16">
             <h2 className="text-6xl font-semibold">Let’s Connect </h2>
             <p className="text-xl ml-1 mt-3">
               Let's align our constellations! Reach out and let the magic of
@@ -43,7 +43,7 @@ const Contact = () => {
               Send
             </div>
           </div>
-          <div className="mr-20 py-10">
+          <div className="mx-2 md:mr-20 py-10">
             <div className="overflow-hidden h-[600px] rounded-3xl">
               <img src={HeroImg} />
             </div>

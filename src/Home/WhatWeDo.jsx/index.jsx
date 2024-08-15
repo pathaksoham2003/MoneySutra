@@ -4,18 +4,18 @@ import { Code, Design, Marketing } from "../../assets";
 const WhatWeDo = () => {
   return (
     <div className="relative w-full flex justify-center">
-      <div className="absolute -top-[350px] -left-[150px] -z-40 h-[600px] w-[600px] rounded-full border-[130px] border-primary/10">
+      <div className="absolute -top-[350px] -left-[150px] -z-40 h-[600px] w-[600px] rounded-full hidden md:block border-[130px] border-primary/10">
 
       </div>
       <div className="w-full max-w-[1240px] flex flex-col">
-        <div className="w-full flex items-center flex-col mt-16">
+        <div className="w-full flex items-center flex-col md:mt-16">
           <h2 className="text-6xl font-semibold">What we do</h2>
           <h2 className="max-w-[480px] text-center mt-3 font-semibold text-gray-500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec
             suscipit dui. Sed cursus nibh id risus ultrices convallis.
           </h2>
         </div>
-        <div className="w-full flex mt-10">
+        <div className="w-full flex mt-10 flex-col md:flex-row">
           <div className="py-14 px-8 rounded-3xl bg-white shadow-xl m-5 border border-gray-300">
             <div className=" h-16 w-16 flex justify-center items-center rounded-full overflow-hidden bg-primary">
               <img className=" w-1/2 h-1/2 object-center" src={Design} />

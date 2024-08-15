@@ -16,9 +16,9 @@ const Hero = () => {
   };
   return (
     <div className="w-full flex justify-center">
-      <div className="bg-slate-200 flex-1"></div>
-      <div className="w-full flex max-w-[1240px] md:max-w-[1240px]">
-        <div className="w-[500px] h-[600px] overflow-hidden">
+      <div className="bg-slate-200 flex-1 hidden md:flex"></div>
+      <div className="w-full flex flex-col-reverse md:flex-row max-w-[1240px] md:max-w-[1240px]">
+        <div className="w-full p-10 rounded-xl md:max-w-[500px] h-[600px] overflow-hidden">
           <img className="object-contain w-full" src={HeroImg} />
         </div>
         <div className="flex flex-1 flex-col justify-start pl-10 pt-20 items-start bg-primary">
@@ -112,7 +112,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="bg-primary flex-1"></div>
+      <div className="bg-primary flex-1 hidden md:flex"></div>
     </div>
   );
 };
