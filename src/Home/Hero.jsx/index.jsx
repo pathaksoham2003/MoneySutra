@@ -18,7 +18,7 @@ const Hero = () => {
     <div className="w-full flex justify-center">
       <div className="bg-slate-200 flex-1 hidden md:flex"></div>
       <div className="w-full flex flex-col-reverse md:flex-row max-w-[1240px] md:max-w-[1240px]">
-        <div className="w-full md:max-w-[500px] h-[650px] overflow-hidden">
+        <div className="w-full hidden md:block md:max-w-[500px] h-[650px] overflow-hidden">
           <img className="object-contain w-full" src={HeroImg} />
         </div>
         <div className="flex flex-1 flex-col justify-start min-h-[650px] pl-10 pt-20 items-start bg-primary">
@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="w-full flex justify-between pr-5">
-            <div className="ml-auto p-5 bg-accent animate-bounce-sm rounded-2xl shadow-lg shadow-black/70">
+            <div className="ml-auto p-5 mb-10 md:mb-0 bg-accent animate-bounce-sm rounded-2xl shadow-lg shadow-black/70">
               <h2 className="text-white text-2xl font-semibold">
                 Contact with me
               </h2>

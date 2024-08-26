@@ -14,7 +14,7 @@ function App() {
   
   return (
     <div className='w-full min-h-screen'>
-      <InfiniteTextStrip/>
+      {/* <InfiniteTextStrip/> */}
       <Navbar/>
       <Hero/>
       <WhatWeDo/>

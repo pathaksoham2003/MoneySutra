@@ -4,7 +4,7 @@ const WhatWeDo = () => {
   return (
     <div className="relative w-full flex justify-center">
       <div className="absolute -top-[350px] -left-[150px] -z-40 h-[600px] w-[600px] rounded-full hidden md:block border-[130px] border-primary/10"></div>
-      <div className="w-full max-w-[1240px] flex flex-col">
+      <div className="w-full max-w-[1240px] flex flex-col pt-10 md:pt-0">
         <div className="w-full flex items-center flex-col md:mt-16">
           <h2 className="text-6xl font-bold">What we do</h2>
           <h2 className="max-w-[480px] text-center mt-3 font-semibold text-gray-500">
