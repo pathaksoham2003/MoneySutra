@@ -11,8 +11,14 @@ import Instagram from "./Instagram.png?react";
 import Design from "./Design.png?react"
 import Marketing from "./Marketing.png?react";
 import Code from "./Code.png?react";
+import APP from "./APP.jpg?react";
+import SP from "./SP.png?react";
+import VK from "./VK.jfif?react";
 
 export {
+  VK,
+  SP,
+  APP,
   CAPathakPP,
   LogoLight,
   LogoDark,

@@ -33,14 +33,14 @@ const Footer = () => {
             <img
               onClick={() =>
                 handleSocialOpen(
-                  "https://mail.google.com/mail/?view=cm&fs=1&to=capathak123@gmail.com"
+                  "https://www.facebook.com/MoneySutraInvestment/"
                 )
               }
               className="w-[24px] mx-3"
               src={Facebook}
             />
             <img
-              onClick={() => handleSocialOpen("https://wa.me/8793543098")}
+              onClick={() => handleSocialOpen("https://wa.me/918793543098")}
               className="w-[24px] mx-3"
               src={Whatsapp}
             />
@@ -56,7 +56,7 @@ const Footer = () => {
             <img
               onClick={() =>
                 handleSocialOpen(
-                  "https://mail.google.com/mail/?view=cm&fs=1&to=capathak123@gmail.com"
+                  "https://www.instagram.com/moneysutrainvestment"
                 )
               }
               className="w-[24px] mx-3"

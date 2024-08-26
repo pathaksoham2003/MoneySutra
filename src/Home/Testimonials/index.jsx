@@ -19,13 +19,12 @@ const Testimonials = () => {
               <Start />
               <Start />
             </div>
-
             <h2 className="text-2xl font-semibold">"{item.reviewHeading}"</h2>
             <p className="text-gray-600 pt-4">{item.review}
             </p>
             <div className="w-full h-1 my-5 bg-gray-400/20 rounded-full"></div>
             <div className="flex w-full">
-              <div className="h-14 w-14 overflow-hidden rounded-full ">
+              <div className="h-16 w-16 overflow-hidden rounded-full ">
                 <img src={item.personAvatar} />
               </div>
               <div className="flex pl-6 flex-col">

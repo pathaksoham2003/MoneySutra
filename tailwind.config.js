@@ -23,7 +23,7 @@ export default {
           "100%":{
             transform:"translateY(10px)",
             opacity:"100%"
-          }
+          },
         },
        "lift": {
           "0%,100%": {
@@ -34,11 +34,16 @@ export default {
           },
           
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       },
       animation: {
         "bounce-sm": "bounce-sm ease-in-out 2s infinite",
         "firstLoad": "firstLoad ease-in-out 0.5s",
-        "lift":"lift ease-in-out 0.5s"
+        "lift":"lift ease-in-out 0.5s",
+        "marquee": 'marquee 25s linear infinite',
       },
       colors: {
         background: "#E5E5E5",

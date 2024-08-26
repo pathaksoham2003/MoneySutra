@@ -54,7 +54,7 @@ const Hero = () => {
                 <img
                   onClick={() =>
                     handleSocialOpen(
-                      "https://mail.google.com/mail/?view=cm&fs=1&to=capathak123@gmail.com"
+                      "https://mail.google.com/mail/?view=cm&fs=1&to=teammoneysutra@gmail.com"
                     )
                   }
                   className=" w-[24px] mr-3"
@@ -63,14 +63,14 @@ const Hero = () => {
                 <img
                   onClick={() =>
                     handleSocialOpen(
-                      "https://mail.google.com/mail/?view=cm&fs=1&to=capathak123@gmail.com"
+                      "https://www.facebook.com/MoneySutraInvestment/"
                     )
                   }
                   className="w-[24px] mr-3"
                   src={Facebook}
                 />
                 <img
-                  onClick={() => handleSocialOpen("https://wa.me/8793543098")}
+                  onClick={() => handleSocialOpen("https://wa.me/918793543098")}
                   className="w-[24px] mr-3"
                   src={Whatsapp}
                 />
@@ -86,7 +86,7 @@ const Hero = () => {
                 <img
                   onClick={() =>
                     handleSocialOpen(
-                      "https://mail.google.com/mail/?view=cm&fs=1&to=capathak123@gmail.com"
+                      "https://www.instagram.com/moneysutrainvestment"
                     )
                   }
                   className="w-[24px] mr-3"
