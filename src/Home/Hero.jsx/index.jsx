@@ -42,7 +42,7 @@ const Hero = () => {
               <h2 className="text-background">
                 AMFI Registered Mutual Fund Distributor{" "}
               </h2>
-              <h2 className="text-background">(ARM-303749)</h2>
+              <h2 className="text-background">(ARN-303749)</h2>
             </div>
           </div>
           <div className="w-full flex justify-between pr-5">

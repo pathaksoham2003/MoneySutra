@@ -1,11 +1,58 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { HeroImg } from "../../assets";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const formElements = form.current.elements;
+    const errors = {};
+    let isValid = true;
+
+    if (!formElements.name.value.trim()) {
+      errors.name = "Name is required";
+      isValid = false;
+    }
+    
+    if (!formElements.surname.value.trim()) {
+      errors.surname = "Surname is required";
+      isValid = false;
+    }
+    
+    if (!formElements.email.value.trim()) {
+      errors.email = "Email is required";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formElements.email.value)) {
+      errors.email = "Email address is invalid";
+      isValid = false;
+    }
+    
+    if (!formElements.contact.value.trim()) {
+      errors.contact = "Contact number is required";
+      isValid = false;
+    } else if (!/^\d{10}$/.test(formElements.contact.value)) {
+      errors.contact = "Contact number must be 10 digits";
+      isValid = false;
+    }
+    
+    if (!formElements.message.value.trim()) {
+      errors.message = "Message is required";
+      isValid = false;
+    }
+    
+    setErrors(errors);
+    return isValid;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
     emailjs
       .sendForm(import.meta.env.VITE_EMJS_S_ID, import.meta.env.VITE_EMJS_T_ID, form.current, {
         publicKey: import.meta.env.VITE_EMJS_PK,
@@ -14,7 +61,8 @@ const Contact = () => {
         (result) => {
           console.log(result);
           console.log("SUCCESS");
-          // window.location.reload(); //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+          // Optionally reset the form here
+          form.current.reset();
         },
         (error) => {
           console.log(error);
@@ -38,34 +86,56 @@ const Contact = () => {
               className="flex flex-col mt-4"
             >
               <div className="w-full flex justify-between">
-                <input
-                  className="w-full mr-2 p-2 border border-gray-500 text-xl rounded-xl my-3"
-                  placeholder="Name"
-                  name="name"
-                />
-                <input
-                  className="w-full ml-2 p-2 border border-gray-500 text-xl rounded-xl my-3"
-                  placeholder="Surname"
-                  name="surname"
-                />
+                <div className="relative w-full mr-2 my-3">
+                  <input
+                    className={`w-full p-2 border border-gray-500 text-xl rounded-xl ${errors.name ? 'border-red-500' : ''}`}
+                    placeholder="Name"
+                    name="name"
+                    aria-describedby="name-error"
+                  />
+                  {errors.name && <p id="name-error" className="text-red-500 text-sm">{errors.name}</p>}
+                </div>
+                <div className="relative w-full ml-2 my-3">
+                  <input
+                    className={`w-full p-2 border border-gray-500 text-xl rounded-xl ${errors.surname ? 'border-red-500' : ''}`}
+                    placeholder="Surname"
+                    name="surname"
+                    aria-describedby="surname-error"
+                  />
+                  {errors.surname && <p id="surname-error" className="text-red-500 text-sm">{errors.surname}</p>}
+                </div>
               </div>
-              <input
-                className=" p-2 border border-gray-500 text-xl rounded-xl my-3"
-                placeholder="Email Address"
-                name="email"
-              />
-              <input
-                className="p-2 border border-gray-500 text-xl rounded-xl my-3"
-                placeholder="Contact No."
-                name="contact"
-              />
-              <textarea
-                id="message"
-                rows="4"
-                className="block p-2.5 my-3 w-full text-xl text-gray-900 rounded-lg border border-gray-500"
-                placeholder="Write your thoughts here..."
-                name="message"
-              ></textarea>
+              <div className="relative my-3">
+                <input
+                  type="email"
+                  className={`p-2 border border-gray-500 text-xl rounded-xl w-full ${errors.email ? 'border-red-500' : ''}`}
+                  placeholder="Email Address"
+                  name="email"
+                  aria-describedby="email-error"
+                />
+                {errors.email && <p id="email-error" className="text-red-500 text-sm">{errors.email}</p>}
+              </div>
+              <div className="relative my-3">
+                <input
+                  type="text"
+                  className={`p-2 border border-gray-500 text-xl rounded-xl w-full ${errors.contact ? 'border-red-500' : ''}`}
+                  placeholder="Contact No."
+                  name="contact"
+                  aria-describedby="contact-error"
+                />
+                {errors.contact && <p id="contact-error" className="text-red-500 text-sm">{errors.contact}</p>}
+              </div>
+              <div className="relative my-3">
+                <textarea
+                  id="message"
+                  rows="4"
+                  className={`block p-2.5 w-full text-xl text-gray-900 rounded-lg border border-gray-500 ${errors.message ? 'border-red-500' : ''}`}
+                  placeholder="Write your thoughts here..."
+                  name="message"
+                  aria-describedby="message-error"
+                ></textarea>
+                {errors.message && <p id="message-error" className="text-red-500 text-sm">{errors.message}</p>}
+              </div>
               <input
                 type="submit"
                 className="bg-primary rounded-xl text-center py-3 text-xl text-white font-bold"
@@ -75,7 +145,7 @@ const Contact = () => {
           </div>
           <div className="mx-2 md:mr-20 py-10">
             <div className="overflow-hidden h-[600px] rounded-3xl">
-              <img src={HeroImg} />
+              <img src={HeroImg} alt="Hero" />
             </div>
           </div>
         </div>
