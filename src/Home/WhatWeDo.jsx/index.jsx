@@ -8,8 +8,9 @@ const WhatWeDo = () => {
         <div className="w-full flex items-center flex-col md:mt-16">
           <h2 className="text-6xl font-bold">What we do</h2>
           <h2 className="max-w-[480px] text-center mt-3 font-semibold text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec
-            suscipit dui. Sed cursus nibh id risus ultrices convallis.
+            Secure your future with MoneySutra's expert-managed mutual
+            funds—grow your wealth effortlessly. Invest today for a brighter
+            tomorrow!
           </h2>
         </div>
         <div className="w-full flex mt-10 flex-col md:flex-row">
